@@ -42,21 +42,21 @@ INSERT INTO categories (category_name) VALUES
 ('category5');
 
 CREATE TABLE movies (
-id INT PRIMARY KEY AUTO_INCREMENT,
-title VARCHAR(50) NOT NULL,
-director_id INT,
-copyright_year YEAR,
-length TIME,
-genre_id INT,
-category_id INT,
-rating DOUBLE(3,2),
-notes TEXT,
-FOREIGN KEY fk_movies_directors(director_id)
-REFERENCES directors(id),
-FOREIGN KEY fk_movies_genres(genre_id)
-REFERENCES genres(id),
-FOREIGN KEY fk_movies_categories(category_id)
-REFERENCES categories(id)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(50) NOT NULL,
+    director_id INT,
+    copyright_year YEAR,
+    length TIME,
+    genre_id INT,
+    category_id INT,
+    rating DOUBLE(3 , 2 ),
+    notes TEXT,
+    FOREIGN KEY (director_id)
+        REFERENCES directors (id),
+    FOREIGN KEY (genre_id)
+        REFERENCES genres (id),
+    FOREIGN KEY (category_id)
+        REFERENCES categories (id)
 );
 
 INSERT INTO movies (title, director_id, genre_id, category_id) VALUES

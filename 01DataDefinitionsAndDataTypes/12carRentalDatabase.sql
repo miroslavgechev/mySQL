@@ -23,7 +23,7 @@ CREATE TABLE cars (
     model VARCHAR(20),
     car_year YEAR,
     category_id INT NOT NULL,
-    FOREIGN KEY (category_id)
+    FOREIGN KEY fk_cars_categories(category_id)
         REFERENCES categories (id),
     doors INT,
     picture BLOB,
@@ -67,13 +67,13 @@ INSERT INTO customers(driver_licence_number, full_name) VALUES
 CREATE TABLE rental_orders (
     id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT NOT NULL,
-    FOREIGN KEY (employee_id)
+    FOREIGN KEY fk_rental_employees(employee_id)
         REFERENCES employees (id),
     customer_id INT NOT NULL,
-    FOREIGN KEY (customer_id)
+    FOREIGN KEY fk_rental_customers(customer_id)
         REFERENCES customers (id),
     car_id INT NOT NULL,
-    FOREIGN KEY (car_id)
+    FOREIGN KEY fk_rental_cars(car_id)
         REFERENCES cars (id),
     car_condition VARCHAR(20),
     tank_level VARCHAR(10),
