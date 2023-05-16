@@ -50,13 +50,7 @@ CREATE TABLE movies (
     genre_id INT,
     category_id INT,
     rating DOUBLE(3 , 2 ),
-    notes TEXT,
-    FOREIGN KEY (director_id)
-        REFERENCES directors (id),
-    FOREIGN KEY (genre_id)
-        REFERENCES genres (id),
-    FOREIGN KEY (category_id)
-        REFERENCES categories (id)
+    notes TEXT
 );
 
 INSERT INTO movies (title, director_id, genre_id, category_id) VALUES
