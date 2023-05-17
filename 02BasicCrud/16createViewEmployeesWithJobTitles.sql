@@ -5,4 +5,13 @@ CREATE VIEW v_employees_job_titles AS
             CONCAT_WS(' ', first_name, last_name)) AS 'full_name',
         job_title
     FROM
-        employees
+        employees;
+
+-- SIMPLER WAY:
+
+-- CREATE VIEW v_employees_job_titles AS
+--     SELECT 
+--         CONCAT_WS(' ', first_name, middle_name, last_name) AS 'full_name',
+--         job_title
+--     FROM
+--         employees
