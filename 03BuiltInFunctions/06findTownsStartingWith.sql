@@ -3,5 +3,5 @@ SELECT
 FROM
     towns
 WHERE
-    LEFT(name, 1) IN ('M' , 'K', 'B', 'E', 'm', 'k', 'b', 'e')
+    UPPER(LEFT(name, 1)) IN ('M' , 'K', 'B', 'E')
 ORDER BY name
