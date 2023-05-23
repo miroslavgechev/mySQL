@@ -10,7 +10,7 @@ UPDATE high_paid_employees
 SET 
     salary = salary + 5000
 WHERE
-    salary > 30000 AND department_id = 1;
+    department_id = 1;
     
 SELECT 
     department_id, AVG(salary) AS 'avg_salary'

@@ -3,4 +3,4 @@ SELECT
 FROM
     employees
 WHERE
-    manager_id IS NULL
+    manager_id IS NULL;
