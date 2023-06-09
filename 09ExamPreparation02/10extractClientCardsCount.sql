@@ -2,7 +2,7 @@ CREATE FUNCTION udf_customer_products_count(name VARCHAR(30))
 RETURNS INT
 RETURN (
 SELECT 
-	COUNT(*) AS `total_products`
+	COUNT(*) AS total_products
 FROM
     customers c
         JOIN

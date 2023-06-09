@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE PROCEDURE `udp_reduce_price`(`category_name` VARCHAR(50))
+CREATE PROCEDURE udp_reduce_price(category_name VARCHAR(50))
 BEGIN
 	   UPDATE products p
 			JOIN

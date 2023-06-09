@@ -4,4 +4,4 @@ FROM
     products
 WHERE
     price > 1000 AND quantity_in_stock < 30
-ORDER BY quantity_in_stock ASC , id;
+ORDER BY quantity_in_stock , id;
